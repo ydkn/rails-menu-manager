@@ -5,7 +5,9 @@ rvm:
   - 2.2.2
 
 gemfile:
-  - Gemfile
+  - gemfiles/rails40
+  - gemfiles/rails41
+  - gemfiles/rails42
 
 script: bundle exec rake spec
 
