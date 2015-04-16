@@ -1,5 +1,6 @@
 [![Gem Version](https://img.shields.io/gem/v/rails-menu-manager.svg)](https://rubygems.org/gems/rails-menu-manager)
 [![Dependencies](https://img.shields.io/gemnasium/ydkn/rails-menu-manager.svg)](https://gemnasium.com/ydkn/rails-menu-manager)
+[![Travis CI](https://img.shields.io/travis/ydkn/rails-menu-manager.svg)](https://travis-ci.org/ydkn/rails-menu-manager)
 [![Code Climate](https://img.shields.io/codeclimate/github/ydkn/rails-menu-manager.svg)](https://codeclimate.com/github/ydkn/rails-menu-manager)
 
 # Rails::Menu::Manager
