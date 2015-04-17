@@ -30,14 +30,22 @@ Set menu path in controller:
 
 ```ruby
 class FooController < ApplicationController
-  menu :main, :users, only: [:index]
+  menu :main, :users, except: [:index]
+
+  def index
+    menu :sidebar, :users
+  end
 end
 ```
 
-Highlight current navigation link:
+Highlight current navigation link(s):
 
 ```ruby
-link_to 'users', users_path, class: current_menu.contains?(:main, :users) ? 'active' : nil
+content_tag :li, 'Menu', class: in_menu?(:main) ? 'active' : nil
+
+link_to 'users', users_path, class: in_menu?(:main, :users) ? 'active' : nil
+
+link_to 'users', users_path, class: in_menu?(:sidebar, :users) ? 'active' : nil
 ```
 
 ## Contributing

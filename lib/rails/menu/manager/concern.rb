@@ -8,21 +8,33 @@ module Rails
         extend ActiveSupport::Concern
 
         included do
-          helper_method :current_menu
+          helper_method :'in_menu?'
         end
 
-        def current_menu
-          @_menu_item || MenuItem.new(nil)
+        def in_menu?(*args)
+          _menu_items.each do |menu|
+            return true if menu.in?(*args)
+          end
+
+          false
+        end
+
+        def menu(*args)
+          _add_menu_setting(*args)
         end
 
         private
+
+        def _menu_items
+          @_menu_items ||= []
+        end
 
         def _add_menu_setting(*args)
           opts = args.extract_options!
 
           path = args.map { |p| p.to_sym }
 
-          @_menu_item = MenuItem.new(path, opts)
+          _menu_items << MenuItem.new(path, opts)
         end
 
         module ClassMethods

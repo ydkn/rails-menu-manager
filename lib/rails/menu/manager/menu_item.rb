@@ -9,7 +9,7 @@ module Rails
           @options = options
         end
 
-        def contains?(*args)
+        def in?(*args)
           return false if path.nil?
 
           !!(path.join('#') =~ /\A#{args.join('#')}\Z/)
