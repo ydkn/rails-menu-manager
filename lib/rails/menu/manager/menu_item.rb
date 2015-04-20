@@ -12,7 +12,7 @@ module Rails
         def in?(*args)
           return false if path.nil?
 
-          !!(path.join('#') =~ /\A#{args.join('#')}\Z/)
+          !!(path.join('#') =~ /\A#{args.join('#')}/i)
         end
       end
     end
