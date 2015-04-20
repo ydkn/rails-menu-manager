@@ -11,6 +11,10 @@ module Rails
           helper_method :'in_menu?'
         end
 
+        # Checks if a at least one defined and active menu is in given path
+        #
+        # @param [Array] Menu path to check
+        # @return [Boolean] Boolean indicating if at least one menu item is in path
         def in_menu?(*args)
           _menu_items.each do |menu|
             return true if menu.in?(*args)
@@ -19,6 +23,10 @@ module Rails
           false
         end
 
+        # Adds a menu
+        # Supports before_action options: if, only, unless, except
+        #
+        # @param [Array/Hash] Menu path and options.
         def menu(*args)
           _add_menu_setting(*args)
         end
