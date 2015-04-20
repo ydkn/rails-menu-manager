@@ -5,14 +5,15 @@ module Rails
         attr_reader :path, :options
 
         def initialize(path, options = {})
-          @path    = path
-          @options = options
+          @path     = path
+          @path_str = path.join('#')
+          @options  = options
         end
 
         def in?(*args)
           return false if path.nil?
 
-          !!(path.join('#') =~ /\A#{args.join('#')}/i)
+          !!(@path_str =~ /\A#{args.join('#')}/i)
         end
       end
     end
