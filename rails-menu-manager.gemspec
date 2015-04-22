@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rails/menu/manager/version'
+require 'rails_menu_manager/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'rails-menu-manager'
-  spec.version       = Rails::Menu::Manager::VERSION
+  spec.version       = RailsMenuManager::VERSION
   spec.authors       = ['Florian Schwab']
   spec.email         = ['me@ydkn.de']
 

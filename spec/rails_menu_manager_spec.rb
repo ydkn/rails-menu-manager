@@ -1,13 +1,13 @@
 require 'spec_helper'
 require 'action_controller'
 
-describe Rails::Menu::Manager do
+describe RailsMenuManager do
   before do
-    ActionController::Base.send(:include, Rails::Menu::Manager::Concern)
+    ActionController::Base.send(:include, RailsMenuManager::ActionController)
   end
 
   it 'has a version number' do
-    expect(Rails::Menu::Manager::VERSION).not_to be nil
+    expect(RailsMenuManager::VERSION).not_to be nil
   end
 
   it 'adds menu method to ActionController::Base' do

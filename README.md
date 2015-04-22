@@ -3,7 +3,7 @@
 [![Travis CI](https://img.shields.io/travis/ydkn/rails-menu-manager.svg)](https://travis-ci.org/ydkn/rails-menu-manager)
 [![Code Climate](https://img.shields.io/codeclimate/github/ydkn/rails-menu-manager.svg)](https://codeclimate.com/github/ydkn/rails-menu-manager)
 
-# Rails::Menu::Manager
+# Rails Menu Manager
 
 Simple menu manager for Rails.
 Besides a flat menu structure it supports multiple navigation menus and nested menus as well.
