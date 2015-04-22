@@ -14,11 +14,7 @@ module RailsMenuManager
     # @param [Array] Menu path to check
     # @return [Boolean] Boolean indicating if at least one menu item is in path
     def in_menu?(*args)
-      _menu_items.each do |menu|
-        return true if menu.in?(*args)
-      end
-
-      false
+      _menu_items.any? { |m| m.in?(*args) }
     end
 
     # Adds a menu
