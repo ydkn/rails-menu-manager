@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.1 (2016-09-26)
+### Fixes
+- Prevent menu items from being highlighted which have the same last path element as other menu items
+
 ## 0.3.0 (2016-07-07)
 ### Changes
 - Rails 5.0 support
